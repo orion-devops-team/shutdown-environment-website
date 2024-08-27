@@ -6,22 +6,7 @@
     <title>Environment Shutdown Notice</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-  <script>
-        // Obtener los parámetros de la URL
-        const urlParams = new URLSearchParams(window.location.search);
-        const app = urlParams.get('app');
-        const env = urlParams.get('env');
-        const system = urlParams.get('system');
-        const project = urlParams.get('project');
-
-        // Mostrar los valores de los parámetros en los elementos HTML
-        document.getElementById('app').textContent = app;
-        document.getElementById('env').textContent = env;
-        document.getElementById('system').textContent = system;
-        document.getElementById('project').textContent = project;
-    </script>
-    
+<body> 
     <header>
         <h1>Environment Shutdown Notice</h1>
     </header>
@@ -39,5 +24,20 @@
     <footer> Copyright © 1999-2024 MercadoLibre S.R.L. <br>
              Av. Caseros 3039, Piso 2, CP 1264, Parque Patricios, CABA
     </footer>
+
+    <script>
+        // Obtener los parámetros de la URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const app = urlParams.get('app');
+        const env = urlParams.get('env');
+        const system = urlParams.get('system');
+        const project = urlParams.get('project');
+
+        // Mostrar los valores de los parámetros en los elementos HTML
+        document.getElementById('app').textContent = app;
+        document.getElementById('env').textContent = env;
+        document.getElementById('system').textContent = system;
+        document.getElementById('project').textContent = project;
+    </script>
 </body>
 </html>
