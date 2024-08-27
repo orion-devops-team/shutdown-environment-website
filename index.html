@@ -17,7 +17,7 @@
             <p>We are shutting down the <strong><span id="app"></span></strong> service.</p>
             <p>The <strong><span id="env"></span></strong> environment will be shut down on <strong><span id="system"></span></strong> system.</p>
             <p>If you want start up the service again, you can use the following command in your terminal:</p>
-            <pre><code class="language-bash">orion up -s <span id="system-orion"></span> -e <span id="env-orion"></span> -p <span id="project-orion"></code></span></pre>
+            <pre><code class="language-bash">orion up -s <span id="systemorion"></span> -e <span id="envorion"></span> -p <span id="projectorion"></code></span></pre>
             <p>Remeber the environment will be shutdown every day at 8:00 PM (by default).</p>
     </main>
     
@@ -40,9 +40,9 @@
         document.getElementById('project').textContent = project;
 
         // Mostrar los valores para el comando Orion
-        document.getElementById('env-orion').textContent = env;
-        document.getElementById('system-orion').textContent = system;
-        document.getElementById('project-orion').textContent = project;
+        document.getElementById('envorion').textContent = env;
+        document.getElementById('systemorion').textContent = system;
+        document.getElementById('projectorion').textContent = project;
     </script>
 </body>
 </html>
