@@ -7,22 +7,33 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <script>
-        // Obtener el nombre de la aplicación del dominio
-        var appName = window.location.href.split('/')[3].split('.')[0];
-        document.getElementById('app-name').textContent = appName;
+  <script>
+        // Obtener los parámetros de la URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const app = urlParams.get('app');
+        const env = urlParams.get('env');
+        const system = urlParams.get('system');
+        const project = urlParams.get('project');
+
+        // Mostrar los valores de los parámetros en los elementos HTML
+        document.getElementById('app').textContent = app;
+        document.getElementById('env').textContent = env;
+        document.getElementById('system').textContent = system;
+        document.getElementById('project').textContent = project;
     </script>
     
     <header>
         <h1>Environment Shutdown Notice</h1>
     </header>
-    
+
     <main>
         <section>
             <h2>Dear adopter,</h2>
-            <p>The environment for the <strong id="app-name">[App Name]</strong> system has been shut down.</p>
-            <p>Becouse is a nonproduction environment, the system is not available at this time.</p>
-            <p>If you want to start up the system, you can do orion up -s <strong id="app-name">[App Name]</strong> in the terminal.</p>
+            <p>We are shutting down the <strong><span id="app"></span></strong> service.</p>
+            <p>The <strong><span id="env"></span></strong> environment will be shut down on <strong><span id="system"></span></strong> system.</p>
+            <p>If you want start up the service again, you can use the following command in your terminal:</p>
+            <pre>orion up -s <span id="system"></span> -e <span id="env"></span> -p <span id="project"></span></pre>
+            <p>Remeber the environment will be shutdown every day at 8:00 PM (by default).</p>
     </main>
     
     <footer> Copyright © 1999-2024 MercadoLibre S.R.L. <br>
