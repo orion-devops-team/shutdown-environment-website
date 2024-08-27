@@ -17,13 +17,13 @@
             <p>We are shutting down the <strong><span id="app"></span></strong> service.</p>
             <p>The <strong><span id="env"></span></strong> environment was shut down on the <strong><span id="system"></span></strong> system.</p>
             <p>If you want to start up the service again, you can use the following command in your terminal:</p>
-            <p>orion up -s <span id="systemorion"></span> -e <span id="envorion"></span> -p <span id="projectorion"></span></p>
+            <pre><code class="language-bash"><strong>orion</strong> up -s <span id="systemorion"></span> -e <span id="envorion"></span> -p <span id="projectorion"></span></code></pre>
             <p>Remember, the non-production environments will be shutdown every day at 8:00 PM ARG (by default).</p>
         </section>
     </main>
     
     <footer>
-        <p>© 1999-2024 MercadoLibre S.R.L.</p>
+        <p>© 1999-<span id="anio"></span> MercadoLibre S.R.L.</p>
         <p>Av. Caseros 3039, Piso 2, CP 1264, Parque Patricios, CABA</p>
     </footer>
 
@@ -44,7 +44,12 @@
         document.getElementById('app').textContent = app;
         document.getElementById('env').textContent = env;
         document.getElementById('system').textContent = system;
-        document.getElementById('project').textContent = project;
+
+        
+        // Obtener el año actual a partir del objeto Date
+        const fechaActual = new Date();
+        const anioActual = fechaActual.getFullYear();
+        document.getElementById('anio').textContent = anioActual;
 
     </script>
 </body>
