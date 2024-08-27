@@ -34,6 +34,11 @@
         const env = urlParams.get('env');
         const system = urlParams.get('system');
         const project = urlParams.get('project');
+        
+        // Mostrar los valores para el comando Orion
+        document.getElementById('envorion').textContent = env;
+        document.getElementById('systemorion').textContent = system;
+        document.getElementById('projectorion').textContent = project;
 
         // Mostrar los valores en el mensaje 
         document.getElementById('app').textContent = app;
@@ -41,10 +46,6 @@
         document.getElementById('system').textContent = system;
         document.getElementById('project').textContent = project;
 
-        // Mostrar los valores para el comando Orion
-        document.getElementById('envorion').textContent = env;
-        document.getElementById('systemorion').textContent = system;
-        document.getElementById('projectorion').textContent = project;
     </script>
 </body>
 </html>
