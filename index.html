@@ -13,8 +13,8 @@
     
     <main>
         <section>
-            <h2>The [Your App Name] is Temporarily Shut Down...</h2>
-            <p>We are currently performing maintenance on the [Your App Name]. This may take a little time, but we expect to be back online shortly.</p>
+            <h2>The <span id="app-name"></span> is Temporarily Shut Down...</h2>
+            <p>We are currently performing maintenance on the <span id="app-name"></span>. This may take a little time, but we expect to be back online shortly.</p>
             <p>We apologize for any inconvenience this may cause and appreciate your understanding.</p>
             <p>If you need assistance, please contact us at <a href="mailto:support@example.com">support@example.com</a>.</p>
             <p>For updates, follow us on our official social media accounts.</p>
@@ -24,5 +24,11 @@
     <footer>
         <p>&copy; 2023 [Your Company Name]. All rights reserved.</p>
     </footer>
+
+    <script>
+        // Obtener el nombre de la aplicación del dominio
+        var appName = window.location.href.split('/')[3].split('.')[0];
+        document.getElementById('app-name').textContent = appName;
+    </script>
 </body>
 </html>
