@@ -2,12 +2,12 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #e6f7f4; 
+    background-color: #e6f7f4;
     color: #333;
 }
 
 header {
-    background-color: #008080; 
+    background-color: #008080;
     color: white;
     text-align: center;
     padding: 1rem 0;
@@ -18,7 +18,7 @@ main {
 }
 
 h2 {
-    color: #008080; 
+    color: #008080;
 }
 
 footer {
